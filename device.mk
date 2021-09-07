@@ -21,6 +21,14 @@ PRODUCT_AAPT_PREF_CONFIG := xhdpi
 TARGET_SCREEN_HEIGHT := 2400
 TARGET_SCREEN_WIDTH := 1080
 
+# Kernel
+LOCAL_KERNEL := device/xiaomi/miatoll-kernel/Image.gz
+PRODUCT_COPY_FILES += \
+    $(LOCAL_KERNEL):kernel
+
+# Kernel headers
+PRODUCT_VENDOR_KERNEL_HEADERS := device/xiaomi/miatoll-kernel/sm6250/kernel-headers
+
 # NFC
 PRODUCT_PACKAGES += \
     NfcNci \
